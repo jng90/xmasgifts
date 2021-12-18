@@ -5,12 +5,13 @@ import pl.sda.xmasgifts.entity.Wish;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public interface XmasGiftsService {
 
     Person addPerson(Person person);
 
-    Optional<Wish> addPersonWish(Wish wish, long personId);
+    Optional<Wish> addPersonWish(Wish wish, UUID personId);
 
     Wish fulfillWishByPerson(long wishId, long personId);
 
